@@ -1,0 +1,11 @@
+version: "3"
+
+services: 
+  spark:
+    build:
+      context: spark
+    volumes:
+      - ./spark:/code
+    ports:
+        - "8888:8888" # jupytelab notebooks
+        - "4040:4040" # SparkContext launches a Web UI at this port
